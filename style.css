@@ -1,0 +1,369 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #585a58;
+    color: #333;
+}
+
+header {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Add more specific styling based on your design preferences */
+
+/* Example styling for buttons */
+button {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Example styling for testimonials */
+#testimonials {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* Example styling for live chat */
+#live-chat {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Social Media Section Styles */
+#social-media {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#social-icons img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+}
+
+/* ... (Your existing CSS styles) ... */
+
+
+
+/* Guarantees Section Styles */
+#guarantees {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#guarantees ul {
+    list-style-type: none;
+}
+
+#guarantees li {
+    margin-bottom: 10px;
+}
+
+#guarantees li strong {
+    color: #0077cc;
+}
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Contact Section Styles */
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact-info p {
+    margin-bottom: 5px;
+}
+
+#contact-info strong {
+    color: #0077cc;
+}
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Pricing Section Styles */
+#pricing {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#pricing-options {
+    margin-top: 10px;
+}
+
+#pricing-options p {
+    margin-bottom: 5px;
+}
+
+#pricing-options strong {
+    color: #0077cc;
+}
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* FAQ Section Styles */
+#faq {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#faq-list {
+    margin-top: 10px;
+}
+
+#faq-list p {
+    margin-bottom: 5px;
+}
+
+#faq-list strong {
+    color: #0077cc;
+}
+
+
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Services Section Styles */
+#services {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#services ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#services li {
+    margin-bottom: 10px;
+}
+
+#additional-services {
+    margin-top: 20px;
+}
+
+#additional-services h3 {
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+#additional-services ul {
+    list-style-type: none;
+}
+
+#additional-services li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Add more specific styling based on your design preferences */
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Blog Section Styles */
+#blog {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#blog-posts {
+    margin-top: 10px;
+}
+
+#blog-posts article {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#blog-posts h3 {
+    color: #0077cc;
+}
+
+#blog-posts p {
+    color: #555;
+}
+
+/* Add more specific styling based on your design preferences */
+
+/* ... (Your existing CSS styles) ... */
+
+/* Testimonials Section Styles */
+#testimonials {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#testimonial-slider {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#testimonial-slider article {
+    display: none;
+    position: absolute;
+}
+
+#testimonial-slider article.active {
+    display: block;
+}
+
+#testimonial-slider p {
+    color: #555;
+}
+
+/* Add more specific styling based on your design preferences */
+
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Payment Options Section Styles */
+#payment-options {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#payment-options ul {
+    list-style-type: none;
+}
+
+#payment-options li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#payment-options li img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Add more specific styling based on your design preferences */
+
+
+/* ... (Your existing CSS styles) ... */
+
+/* Team Section Styles */
+/* ... (Your existing CSS styles) ... */
+
+/* Team Section Styles */
+#team {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.team-member {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.tooltip h4 {
+    color: #0077cc;
+    margin-bottom: 5px;
+}
+
+.tooltip p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Add more specific styling based on your design preferences */
