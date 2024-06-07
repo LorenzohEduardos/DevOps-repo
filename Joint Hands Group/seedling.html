@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="#">
+        <title>Joint Hands Group</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="tree.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+            .order-form {
+                background: #fff;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .order-form h2 {
+                margin-top: 0;
+            }
+            .order-form label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+            .order-form input, .order-form select, .order-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .order-form button {
+                padding: 10px 20px;
+                border: none;
+                background: #5cb85c;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .order-form button:hover {
+                background: #4cae4c;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"><img src="images/logo.jpg" class="logo" alt="logo"></a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="seedling.html">Seedlings</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="treeplanting.html">Tree Planting Services</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html"><i class="far fa-shopping-basket" aria-hidden="true"></i></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Translate</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="translatePage('fr')">French</a>
+                            <a href="#" onclick="translatePage('de')">German</a>
+                            <a href="#" onclick="translatePage('zh-CN')">Chinese</a>
+                            <a href="#" onclick="translatePage('nl')">Dutch</a>
+                            <a href="#" onclick="translatePage('ko')">Korean</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <fieldset id="catalogue" class="section-p1"> 
+            <legend style="font-weight: bold; font-size: large;font-variant: small-caps;">Catalogue</legend>
+            <section id="feature" class="section-p1">
+                <div class="fe-box">
+                    <img src="images/graftedmangoes.png" alt="graftedmangoes" style="width: 300px; height: 200px;">
+                    <h6>Grafted Mangoes</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/avocado.png" alt="avocado" style="width: 300px; height: 200px;">
+                    <h6>Avocado</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/apples.png" alt="apple" style="width: 300px; height: 200px;">
+                    <h6>Apple</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/oranges.png" alt="oranges" style="width: 300px; height: 200px;">
+                    <h6>Orange</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/papaya.png" alt="papaya" style="width: 300px; height: 200px;">
+                    <h6>Papaya</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/pomegranate.png" alt="pomegranate" style="width: 300px; height: 200px;">
+                    <h6>Pome Granate</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/passionfruit.png" alt="passionfruit" style="width: 300px; height: 200px;">
+                    <h6>Passion Fruit</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/treetomato.png" alt="treetomato" style="width: 300px; height: 200px;">
+                    <h6>Tree Tomato</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/guavas.png" alt="Guava" style="width: 300px; height: 200px;">
+                    <h6>Guava</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="images/jackfruit.png" alt="Jackfruit" style="width: 300px; height: 200px;">
+                    <h6>Jack Fruit</h6>
+                </div>
+            </section>
+        </fieldset>
+
+        <section id="product1" class="section-p1">
+            <h2>Featured Products</h2>
+            <div class="pro-container">
+                <div class="pro" data-name="Grafted Mangoes" data-price="300" data-image="images/graftedmangoes.png">
+                    <img src="images/graftedmangoes.png" alt="">
+                    <div class="des">
+                        <span>Grafted Mangoes</span>
+                        <h5 class="description">
+                            <label><input type="checkbox" value="Ngowe"> Ngowe</label>
+                            <label><input type="checkbox" value="Apple"> Apple</label>
+                            <label><input type="checkbox" value="Kent"> Kent</label>
+                            <label><input type="checkbox" value="Sabine"> Sabine</label>
+                            <label><input type="checkbox" value="Tommy"> Tommy</label>
+                        </h5>
+                        <input type="number" class="quantity" min="1" value="1">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.300</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Avocado" data-price="250" data-image="images/avocado.png">
+                    <img src="images/avocado.png" alt="">
+                    <div class="des">
+                        <span>Avocado</span>
+                        <h5 class="description">Hass,Fuerte</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.250</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Orange" data-price="300" data-image="images/oranges.png">
+                    <img src="images/oranges.png" alt="">
+                    <div class="des">
+                        <span>Orange</span>
+                        <h5 class="description">Pixie,Washington Naval,Tangerine,Valencia</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.300</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Papaya" data-price="150" data-image="images/papaya.png">
+                    <img src="images/papaya.png" alt="">
+                    <div class="des">
+                        <span>Papaya</span>
+                        <h5 class="description">Red Royale,Malkia F1,Calina,Red Sweet</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.150</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Pomegranate" data-price="300" data-image="images/pomegranate.png">
+                    <img src="images/pomegranate.png" alt="">
+                    <div class="des">
+                        <span>Pomegranate</span>
+                        <h5 class="description">Pomegranate</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.300</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Passion Fruit" data-price="100" data-image="images/passionfruit.png">
+                    <img src="images/passionfruit.png" alt="">
+                    <div class="des">
+                        <span>Passion Fruit</span>
+                        <h5 class="description">Giant Passion, Yellow Passion,Purple Passion</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Tree Tomato" data-price="100" data-image="images/treetomato.png">
+                    <img src="images/treetomato.png" alt="">
+                    <div class="des">
+                        <span>Tree Tomato</span>
+                        <h5 class="description">Tree Tomato/h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.100</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Guava" data-price="200" data-image="images/guavas.png">
+                    <img src="images/guavas.png" alt="">
+                    <div class="des">
+                        <span>Guava</span>
+                        <h5 class="description">Desert Guava,White Guava,Chinese Guava</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.200</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Jack Fruit" data-price="250" data-image="images/jackfruit.png">
+                    <img src="images/jackfruit.png" alt="">
+                    <div class="des">
+                        <span>Jack Fruit</span>
+                        <h5 class="description">Jack Fruit</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.250</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro" data-name="Apple" data-price="400" data-image="images/apples.png">
+                    <img src="images/apples.png" alt="">
+                    <div class="des">
+                        <span>Apples</span>
+                        <h5 class="description">Pink Lady</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Ksh.400</h4>
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="section-p1">
+            <h2>Shopping Cart</h2>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be populated here -->
+                </tbody>
+            </table>
+        </section>
+
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const cartIcons = document.querySelectorAll(".fal.fa-shopping-cart");
+
+    cartIcons.forEach(icon => {
+        icon.addEventListener("click", function(event) {
+            event.preventDefault();
+            const productElement = this.closest(".pro");
+            const productName = productElement.dataset.name;
+            const productPrice = productElement.dataset.price;
+            const productImage = productElement.dataset.image;
+            const quantityInput = productElement.querySelector(".quantity");
+            const quantity = parseInt(quantityInput.value);
+
+            // Collect selected descriptions
+            const selectedDescriptions = [];
+            const checkboxes = productElement.querySelectorAll(".description input[type='checkbox']:checked");
+            checkboxes.forEach(checkbox => {
+                selectedDescriptions.push(checkbox.value);
+            });
+
+            if (selectedDescriptions.length === 0) {
+                alert("Please select at least one description.");
+                return;
+            }
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const productIndex = cart.findIndex(item => item.name === productName && item.description.join(", ") === selectedDescriptions.join(", "));
+            if (productIndex > -1) {
+                cart[productIndex].quantity += quantity;
+            } else {
+                cart.push({ name: productName, price: productPrice, image: productImage, quantity: quantity, description: selectedDescriptions });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        });
+    });
+
+    function loadCart() {
+        const cartTableBody = document.querySelector("#cartTable tbody");
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cartTableBody.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.name} (${item.description.join(", ")})</td>
+                <td><img src="${item.image}" alt="${item.name}" style="width: 50px;"></td>
+                <td>Ksh. ${item.price}</td>
+                <td><input type="number" class="cart-quantity" min="1" value="${item.quantity}" data-index="${index}"></td>
+                <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+            `;
+            cartTableBody.appendChild(row);
+        });
+
+        document.querySelectorAll(".cart-quantity").forEach(input => {
+            input.addEventListener("change", function() {
+                const index = this.dataset.index;
+                updateCartItemQuantity(index, this.value);
+            });
+        });
+
+        document.querySelectorAll(".remove-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const index = this.dataset.index;
+                removeCartItem(index);
+            });
+        });
+    }
+
+    function updateCartItemQuantity(index, quantity) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[index].quantity = parseInt(quantity);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+    }
+
+    function removeCartItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+    }
+
+    loadCart();
+});
+
+       </script>
+    </body>
+</html>

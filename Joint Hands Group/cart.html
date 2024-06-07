@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tree.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .order-form {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form h2 {
+            margin-top: 0;
+        }
+
+        .order-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .order-form button {
+            padding: 10px 20px;
+            border: none;
+            background: #5cb85c;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+<section id="header">
+    <a href="#"><img src="images/logo.jpg" class="logo" alt="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="seedling.html">Seedlings</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="treeplanting.html">Tree Planting Services</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="cart.html"><i class="far fa-shopping-basket" aria-hidden="true"></i></a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Translate</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="translatePage('fr')">French</a>
+                    <a href="#" onclick="translatePage('de')">German</a>
+                    <a href="#" onclick="translatePage('zh-CN')">Chinese</a>
+                    <a href="#" onclick="translatePage('nl')">Dutch</a>
+                    <a href="#" onclick="translatePage('ko')">Korean</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="cart" class="section-p1">
+    <table width="100%">
+        <thead>
+        <tr>
+            <td>Remove</td>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Cart items will be dynamically added here -->
+        </tbody>
+    </table>
+</section>
+
+<section id="cart-add" class="section-p1">
+    <div id="coupon">
+        <h3>Apply Coupon</h3>
+        <div>
+            <input type="text" placeholder="Enter Your Coupon">
+            <button class="normal">Apply</button>
+        </div>
+    </div>
+    <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>Ksh.335</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>Ksh.335</strong></td>
+            </tr>
+        </table>
+        <button class="normal">Proceed To checkout</button>
+    </div>
+</section>
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="images/logo.jpg" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong>Migori County</p>
+        <p><strong>Phone:</strong>+2547....</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">View Cart</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024. Joint Hands Group. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="translate.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Retrieve product details from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('productName');
+        const productPrice = urlParams.get('productPrice');
+        const productImage = urlParams.get('productImage');
+        console.log(productName);
+        console.log(productPrice);
+        console.log(productImage);
+
+        // Add product details to the table
+        const tbody = document.querySelector("#cart tbody");
+        const newRow = `
+            <tr>
+                <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                <td><img src="${productImage}" alt="${productName}"></td>
+                <td>${productName}</td>
+                <td>Description</td>
+                <td>${productPrice}</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>${productPrice}</td>
+            </tr>
+        `;
+        tbody.innerHTML += newRow;
+    });
+</script>
+</body>
+</html>
+
